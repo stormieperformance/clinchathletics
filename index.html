@@ -19,12 +19,13 @@
       --muted:rgba(242,237,228,0.68);
       --muted-2:rgba(242,237,228,0.48);
       --gold:#c9a76a;
-      --gold-soft:rgba(201,167,106,0.26);
-      --line:rgba(201,167,106,0.18);
-      --line-soft:rgba(255,255,255,0.08);
+      --gold-soft:rgba(201,167,106,0.20);
+      --line:rgba(201,167,106,0.14);
+      --line-soft:rgba(255,255,255,0.04);
       --max:1400px;
       --radius:20px;
       --shadow:0 20px 60px rgba(0,0,0,0.28);
+      --shadow-soft:0 24px 70px rgba(0,0,0,0.16);
     }
 
     *{
@@ -39,8 +40,8 @@
 
     body{
       background:
-        radial-gradient(circle at top, rgba(201,167,106,0.06), transparent 30%),
-        linear-gradient(to bottom, #121216, #0e0e12 70%);
+        radial-gradient(circle at top, rgba(201,167,106,0.05), transparent 30%),
+        linear-gradient(to bottom, #121216, #0d0d11 72%);
       color:var(--text);
       font-family:Inter, sans-serif;
       -webkit-font-smoothing:antialiased;
@@ -71,8 +72,8 @@
       top:0;
       z-index:50;
       backdrop-filter:blur(18px);
-      background:rgba(10,10,14,0.72);
-      border-bottom:1px solid rgba(255,255,255,0.04);
+      background:rgba(10,10,14,0.66);
+      border-bottom:1px solid rgba(255,255,255,0.03);
     }
 
     .nav{
@@ -134,17 +135,17 @@
     .icon-btn{
       width:40px;
       height:40px;
-      border:1px solid var(--line);
+      border:1px solid rgba(201,167,106,0.16);
       border-radius:999px;
       display:grid;
       place-items:center;
-      background:rgba(255,255,255,0.02);
+      background:rgba(255,255,255,0.015);
       transition:all 0.25s ease;
     }
 
     .icon-btn:hover{
-      border-color:rgba(201,167,106,0.45);
-      background:rgba(201,167,106,0.06);
+      border-color:rgba(201,167,106,0.28);
+      background:rgba(201,167,106,0.04);
     }
 
     .icon-btn svg{
@@ -164,10 +165,9 @@
       margin:0 auto;
       position:relative;
       min-height:78vh;
-      border:1px solid var(--line-soft);
       border-radius:28px;
       overflow:hidden;
-      box-shadow:var(--shadow);
+      box-shadow:var(--shadow-soft);
       background:#0d0d10;
     }
 
@@ -268,33 +268,32 @@
       min-height:48px;
       padding:0 20px;
       border-radius:999px;
-      border:1px solid var(--line);
+      border:1px solid rgba(201,167,106,0.18);
       font-size:11px;
       text-transform:uppercase;
       letter-spacing:0.18em;
       transition:all 0.25s ease;
       cursor:pointer;
+      color:var(--gold);
+      background:rgba(201,167,106,0.05);
+    }
+
+    .btn:hover{
+      background:rgba(201,167,106,0.10);
+      border-color:rgba(201,167,106,0.30);
+      transform:translateY(-1px);
     }
 
     .btn-primary{
-      color:#121216;
-      background:var(--gold);
-      border-color:var(--gold);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-1px);
-      filter:brightness(1.03);
+      color:var(--gold);
+      background:rgba(201,167,106,0.05);
+      border-color:rgba(201,167,106,0.18);
     }
 
     .btn-secondary{
       color:var(--gold);
       background:rgba(201,167,106,0.05);
-    }
-
-    .btn-secondary:hover{
-      background:rgba(201,167,106,0.1);
-      border-color:rgba(201,167,106,0.38);
+      border-color:rgba(201,167,106,0.18);
     }
 
     /* SECTION */
@@ -355,17 +354,19 @@
     }
 
     .card{
-      background:linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid var(--line-soft);
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
+      background:none;
+      border:none;
+      border-radius:0;
+      overflow:visible;
+      box-shadow:none;
     }
 
     .card-media{
       aspect-ratio:4/5;
       overflow:hidden;
       background:#0d0d11;
+      border-radius:22px;
+      box-shadow:0 24px 60px rgba(0,0,0,0.18);
     }
 
     .card-media img{
@@ -380,7 +381,7 @@
     }
 
     .card-body{
-      padding:18px 18px 20px;
+      padding:18px 4px 8px;
     }
 
     .card-title{
@@ -468,12 +469,12 @@
     .series-card{
       position:relative;
       min-width:300px;
+      border:none;
       border-radius:24px;
       overflow:hidden;
-      border:1px solid var(--line-soft);
       background:#0d0d11;
       aspect-ratio:4/5;
-      box-shadow:var(--shadow);
+      box-shadow:0 26px 64px rgba(0,0,0,0.18);
     }
 
     .series-card img{
@@ -535,14 +536,16 @@
     }
 
     .about-copy{
-      padding:28px;
-      border:1px solid var(--line-soft);
-      border-radius:24px;
-      background:linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:28px 8px 10px 0;
+      border:none;
+      border-radius:0;
+      background:none;
+      box-shadow:none;
     }
 
     .about-copy h2{
       margin-bottom:20px;
+      max-width:11ch;
     }
 
     .about-copy p{
@@ -564,10 +567,10 @@
     .about-image{
       border-radius:24px;
       overflow:hidden;
-      border:1px solid var(--line-soft);
+      border:none;
       min-height:100%;
       background:#0d0d11;
-      box-shadow:var(--shadow);
+      box-shadow:0 26px 68px rgba(0,0,0,0.18);
     }
 
     .about-image img{
@@ -581,19 +584,17 @@
     /* NEWSLETTER */
 
     .newsletter{
-      padding:0 0 88px;
+      padding:8px 0 88px;
     }
 
     .newsletter-box{
       width:min(var(--max), calc(100% - 32px));
       margin:0 auto;
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:34px;
-      background:
-        radial-gradient(circle at top right, rgba(201,167,106,0.08), transparent 28%),
-        linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      box-shadow:var(--shadow);
+      border:none;
+      border-radius:0;
+      padding:10px 0 0;
+      background:none;
+      box-shadow:none;
     }
 
     .newsletter-kicker{
@@ -610,6 +611,7 @@
       font-weight:500;
       margin-bottom:12px;
       line-height:0.96;
+      max-width:11ch;
     }
 
     .newsletter p{
@@ -623,13 +625,15 @@
       display:flex;
       gap:12px;
       flex-wrap:wrap;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,0.05);
     }
 
     .newsletter-form input{
       flex:1 1 280px;
       min-height:52px;
       background:#0f0f13;
-      border:1px solid var(--line-soft);
+      border:1px solid rgba(255,255,255,0.05);
       border-radius:999px;
       color:var(--text);
       padding:0 18px;
@@ -645,13 +649,19 @@
       min-height:52px;
       padding:0 22px;
       border-radius:999px;
-      border:1px solid var(--gold);
-      background:var(--gold);
-      color:#121216;
+      border:1px solid rgba(201,167,106,0.18);
+      background:rgba(201,167,106,0.05);
+      color:var(--gold);
       font-size:11px;
       letter-spacing:0.18em;
       text-transform:uppercase;
       cursor:pointer;
+      transition:all 0.25s ease;
+    }
+
+    .newsletter-form button:hover{
+      background:rgba(201,167,106,0.10);
+      border-color:rgba(201,167,106,0.30);
     }
 
     /* REVEAL */
@@ -693,7 +703,7 @@
       flex-wrap:wrap;
       color:var(--muted-2);
       font-size:12px;
-      border-top:1px solid rgba(255,255,255,0.05);
+      border-top:1px solid rgba(255,255,255,0.04);
       padding-top:18px;
     }
 
@@ -721,6 +731,10 @@
 
       .about-image img{
         min-height:360px;
+      }
+
+      .about-copy{
+        padding-right:0;
       }
     }
 
@@ -762,7 +776,11 @@
       }
 
       .newsletter-box{
-        padding:24px;
+        padding-top:0;
+      }
+
+      .newsletter h2{
+        max-width:100%;
       }
     }
 
@@ -844,7 +862,7 @@
           and restraint.
         </p>
         <div class="hero-actions">
-          <a href="#products" class="btn btn-primary">Explore</a>
+          <a href="#products" class="btn btn-secondary">Explore</a>
           <a href="#newsletter" class="btn btn-secondary">Subscribe to emails</a>
         </div>
       </div>
@@ -973,7 +991,7 @@
         <img src="images/victoryhero1.png" alt="Victory Series">
         <div class="series-overlay"></div>
         <div class="series-content">
-          <div class="series-label">Series IIII</div>
+          <div class="series-label">Series IV</div>
           <h3>Victory</h3>
           <p>Outcome, dominance, and arrival. A ceremonial expression of earned status and final form.</p>
         </div>
