@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +45,7 @@
       font-family:Inter, sans-serif;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
+      overflow-x:hidden;
     }
 
     img{
@@ -181,7 +181,7 @@
       height:100%;
       object-fit:cover;
       filter:saturate(0.92) contrast(1.04) brightness(0.8);
-      transform:scale(1.035);
+      transform:scale(1.04);
       transition:transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -208,27 +208,27 @@
       min-height:78vh;
     }
 
-    .hero-content > * {
-      opacity: 0;
-      transform: translateY(28px);
-      filter: blur(8px);
+    .hero-content > *{
+      opacity:0;
+      transform:translateY(28px);
+      filter:blur(8px);
       transition:
         opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
         transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
         filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .hero-loaded .hero-content > * {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
+    .hero-loaded .hero-content > *{
+      opacity:1;
+      transform:translateY(0);
+      filter:blur(0);
     }
 
-    .hero-loaded .hero-content > *:nth-child(1) { transition-delay: 0.08s; }
-    .hero-loaded .hero-content > *:nth-child(2) { transition-delay: 0.18s; }
-    .hero-loaded .hero-content > *:nth-child(3) { transition-delay: 0.30s; }
-    .hero-loaded .hero-content > *:nth-child(4) { transition-delay: 0.42s; }
-    .hero-loaded .hero-content > *:nth-child(5) { transition-delay: 0.54s; }
+    .hero-loaded .hero-content > *:nth-child(1){ transition-delay:0.08s; }
+    .hero-loaded .hero-content > *:nth-child(2){ transition-delay:0.18s; }
+    .hero-loaded .hero-content > *:nth-child(3){ transition-delay:0.30s; }
+    .hero-loaded .hero-content > *:nth-child(4){ transition-delay:0.42s; }
+    .hero-loaded .hero-content > *:nth-child(5){ transition-delay:0.54s; }
 
     .eyebrow{
       color:var(--gold);
@@ -390,32 +390,12 @@
       line-height:1.04;
     }
 
-    .price{
-      color:var(--gold);
-      font-size:15px;
-      margin-bottom:16px;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .card .price {
-        opacity: 0;
-        transform: translateY(10px);
-        filter: blur(4px);
-        transition:
-          opacity 0.35s ease,
-          transform 0.35s ease,
-          filter 0.35s ease;
-      }
-
-      .card:hover .price,
-      .card:focus-within .price {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-      }
+    .card-meta{
+      margin-top:16px;
     }
 
     .text-link{
+      position:relative;
       display:inline-flex;
       align-items:center;
       gap:10px;
@@ -427,6 +407,60 @@
 
     .text-link span:last-child{
       color:var(--gold);
+    }
+
+    .text-link .meta-default,
+    .text-link .meta-hover{
+      transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        filter 0.35s ease,
+        color 0.35s ease,
+        width 0.35s ease;
+      display:inline-block;
+      white-space:nowrap;
+    }
+
+    .text-link .meta-hover{
+      color:var(--gold);
+    }
+
+    @media (hover: hover) and (pointer: fine){
+      .text-link .meta-hover{
+        opacity:0;
+        transform:translateY(8px);
+        filter:blur(4px);
+        width:0;
+        overflow:hidden;
+      }
+
+      .card:hover .text-link .meta-default,
+      .card:focus-within .text-link .meta-default{
+        opacity:0;
+        transform:translateY(-8px);
+        filter:blur(4px);
+        width:0;
+        overflow:hidden;
+      }
+
+      .card:hover .text-link .meta-hover,
+      .card:focus-within .text-link .meta-hover{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+        width:auto;
+      }
+    }
+
+    @media (hover: none), (pointer: coarse){
+      .text-link .meta-default{
+        display:none;
+      }
+
+      .text-link .meta-hover{
+        display:inline-block;
+        color:var(--gold);
+      }
     }
 
     /* SERIES */
@@ -620,6 +654,33 @@
       cursor:pointer;
     }
 
+    /* REVEAL */
+
+    .reveal-section,
+    .reveal-card,
+    .reveal-series-item{
+      opacity:0;
+      transform:translateY(34px);
+      filter:blur(8px);
+      transition:
+        opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .in-view.reveal-section,
+    .in-view.reveal-card,
+    .in-view.reveal-series-item{
+      opacity:1;
+      transform:translateY(0);
+      filter:blur(0);
+    }
+
+    .reveal-stagger .reveal-series-item:nth-child(1){ transition-delay:0.06s; }
+    .reveal-stagger .reveal-series-item:nth-child(2){ transition-delay:0.16s; }
+    .reveal-stagger .reveal-series-item:nth-child(3){ transition-delay:0.26s; }
+    .reveal-stagger .reveal-series-item:nth-child(4){ transition-delay:0.36s; }
+
     /* FOOTER */
 
     .footer{
@@ -705,24 +766,37 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .hero-content > * {
-        opacity: 1 !important;
-        transform: none !important;
-        filter: none !important;
-        transition: none !important;
+    @media (prefers-reduced-motion: reduce){
+      .hero-content > *,
+      .reveal-section,
+      .reveal-card,
+      .reveal-series-item{
+        opacity:1 !important;
+        transform:none !important;
+        filter:none !important;
+        transition:none !important;
       }
 
-      .hero-media img {
-        transform: scale(1.01) !important;
-        transition: none !important;
+      .hero-media img{
+        transform:scale(1.01) !important;
+        transition:none !important;
       }
 
-      .card .price {
-        opacity: 1 !important;
-        transform: none !important;
-        filter: none !important;
-        transition: none !important;
+      .text-link .meta-default,
+      .text-link .meta-hover{
+        transition:none !important;
+      }
+
+      .text-link .meta-default{
+        display:none !important;
+      }
+
+      .text-link .meta-hover{
+        display:inline-block !important;
+        opacity:1 !important;
+        transform:none !important;
+        filter:none !important;
+        width:auto !important;
       }
     }
   </style>
@@ -783,20 +857,23 @@
         <div class="section-kicker">Selected items</div>
         <h2>Premium fight gear for champions</h2>
       </div>
-      <p class="section-sub">
-       
-      </p>
+      <p class="section-sub"></p>
     </div>
 
     <div class="carousel">
       <article class="card">
         <div class="card-media">
-         <img src="images/midnightcloseup.png" alt="Midnight Tiger Shorts">
+          <img src="images/midnightcloseup.png" alt="Midnight Tiger Shorts">
         </div>
         <div class="card-body">
           <h3 class="card-title">Midnight Tiger Shorts</h3>
-          <div class="price">1,499 kr</div>
-          <a href="#" class="text-link"><span>View product</span><span>→</span></a>
+          <div class="card-meta">
+            <a href="#" class="text-link">
+              <span class="meta-default">View product</span>
+              <span class="meta-hover">1,499 kr</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -806,8 +883,13 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">Guardian Tiger Mouthguard</h3>
-          <div class="price">699 kr</div>
-          <a href="#" class="text-link"><span>View product</span><span>→</span></a>
+          <div class="card-meta">
+            <a href="#" class="text-link">
+              <span class="meta-default">View product</span>
+              <span class="meta-hover">699 kr</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -817,8 +899,13 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">Guardian Hand Wraps</h3>
-          <div class="price">499 kr</div>
-          <a href="#" class="text-link"><span>View product</span><span>→</span></a>
+          <div class="card-meta">
+            <a href="#" class="text-link">
+              <span class="meta-default">View product</span>
+              <span class="meta-hover">499 kr</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -828,14 +915,19 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">Velocity Jump Rope</h3>
-          <div class="price">899 kr</div>
-          <a href="#" class="text-link"><span>View product</span><span>→</span></a>
+          <div class="card-meta">
+            <a href="#" class="text-link">
+              <span class="meta-default">View product</span>
+              <span class="meta-hover">899 kr</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="section container">
+  <section class="section container reveal-section" id="series">
     <div class="section-header">
       <div>
         <div class="section-kicker">Explore our series</div>
@@ -846,8 +938,8 @@
       </p>
     </div>
 
-    <div class="carousel">
-      <article class="series-card">
+    <div class="carousel reveal-stagger">
+      <article class="series-card reveal-series-item">
         <img src="images/mouthguardcloseup.png" alt="Guardian Series">
         <div class="series-overlay"></div>
         <div class="series-content">
@@ -857,7 +949,7 @@
         </div>
       </article>
 
-      <article class="series-card">
+      <article class="series-card reveal-series-item">
         <img src="images/midnight.png" alt="Midnight Series">
         <div class="series-overlay"></div>
         <div class="series-content">
@@ -867,7 +959,7 @@
         </div>
       </article>
 
-      <article class="series-card">
+      <article class="series-card reveal-series-item">
         <img src="images/jumpropecloseup.png" alt="Velocity Series"> 
         <div class="series-overlay"></div>
         <div class="series-content">
@@ -877,7 +969,7 @@
         </div>
       </article>
 
-      <article class="series-card">
+      <article class="series-card reveal-series-item">
         <img src="images/victoryhero1.png" alt="Victory Series">
         <div class="series-overlay"></div>
         <div class="series-content">
@@ -891,7 +983,7 @@
 
   <section class="section container" id="about">
     <div class="about-grid">
-      <div class="about-copy">
+      <div class="about-copy reveal-card">
         <div class="section-kicker">About Clinch</div>
         <h2>An independent combat label.</h2>
         <p>
@@ -908,14 +1000,14 @@
         <div class="about-note">Limited drops only</div>
       </div>
 
-      <div class="about-image">
+      <div class="about-image reveal-card">
         <img src="images/midnighthero2.png" alt="Clinch Athletics editorial image">
       </div>
     </div>
   </section>
 
   <section class="newsletter" id="newsletter">
-    <div class="newsletter-box">
+    <div class="newsletter-box reveal-card">
       <div class="newsletter-kicker">Subscribe to our emails</div>
       <h2>Stay close to the next drop.</h2>
       <p>
@@ -940,6 +1032,9 @@
 
       if (reducedMotion) {
         document.body.classList.add('hero-loaded');
+        document.querySelectorAll('.reveal-section, .reveal-card, .reveal-series-item').forEach(el => {
+          el.classList.add('in-view');
+        });
         return;
       }
 
@@ -948,6 +1043,22 @@
           document.body.classList.add('hero-loaded');
         });
       });
+
+      const revealItems = document.querySelectorAll('.reveal-section, .reveal-card, .reveal-series-item');
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.16,
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      revealItems.forEach(item => observer.observe(item));
     });
   </script>
 
