@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Clinch Athletics</title>
+  <meta name="description" content="Join the Clinch Athletics waitlist and stay updated on future releases, product availability and limited drops." />
+  <link rel="canonical" href="https://clinchathletics.com/contact.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg: #090909;
+      --panel: #101010;
+      --text: #ece7df;
+      --muted: rgba(236,231,223,0.68);
+      --soft: rgba(236,231,223,0.32);
+      --line: rgba(236,231,223,0.08);
+      --gold: #c9a96e;
+      --gold-soft: rgba(201,169,110,0.12);
+      --serif: 'Cormorant Garamond', serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(circle at top left, rgba(201,169,110,0.06), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(201,169,110,0.05), transparent 22%);
+    }
+
+    .page {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 28px 80px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      min-width: 220px;
+    }
+
+    .nav-center {
+      text-align: center;
+      flex: 1;
+    }
+
+    .nav-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brand {
+      color: var(--gold);
+      text-decoration: none;
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .hero {
+      padding: 42px 0 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+      gap: 28px;
+      align-items: end;
+    }
+
+    .hero-kicker {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      font-family: var(--serif);
+      font-size: clamp(64px, 8vw, 116px);
+      font-weight: 300;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    .hero-side {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.015);
+      padding: 24px;
+    }
+
+    .hero-side h2 {
+      margin: 0 0 12px;
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 0.95;
+    }
+
+    .hero-side p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .section {
+      padding-top: 34px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(30px, 3vw, 44px);
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .section-note {
+      color: var(--soft);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 22px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.012);
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-label {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .contact-value,
+    .contact-value a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      background: #0d0d0d;
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      padding: 16px 16px;
+      outline: none;
+      border-radius: 0;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(201,169,110,0.34);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 22px;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold);
+      color: var(--text);
+      background: rgba(201,169,110,0.04);
+      transition: transform 0.22s ease, background 0.22s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: rgba(201,169,110,0.1);
+    }
+
+    .note {
+      margin-top: 12px;
+      color: var(--soft);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 1100px) {
+      .hero,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 0 18px 56px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        text-align: center;
+      }
+
+      .nav-left,
+      .nav-right {
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <nav class="nav-left">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Catalog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-center">
+        <a class="brand" href="index.html">CLINCH ATHLETICS</a>
+      </div>
+
+      <div class="nav-right"></div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Waitlist / Contact</div>
+        <h1>Stay close.</h1>
+        <p class="hero-copy">
+          Join the waitlist to signal interest in specific products, future drops or general Clinch Athletics updates. This is the simplest way to know who is watching the brand as it develops.
+        </p>
+      </div>
+
+      <div class="hero-side">
+        <h2>Limited, not loud.</h2>
+        <p>
+          Clinch Athletics is being built carefully. Use the waitlist if you want updates on product availability, new imagery, release timing or future directions inside each series.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Contact & Waitlist</h2>
+        <div class="section-note">Direct Lines</div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Contact</h3>
+          <p>
+            For product interest, future drops, collaborations or general questions, use the information below or join the waitlist through the form.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:clinchathletics.store@gmail.com">clinchathletics.store@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Instagram</div>
+              <div class="contact-value">
+                <a href="https://instagram.com/clinch.athletics" target="_blank" rel="noopener noreferrer">@clinch.athletics</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Join Waitlist</h3>
+
+          <!-- Replace YOUR_FORMSPREE_ID with your actual Formspree endpoint later -->
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Your email" required>
+            </div>
+
+            <div class="field">
+              <label for="interest">Interested In</label>
+              <select id="interest" name="interest" required>
+                <option value="">Select</option>
+                <option value="Midnight Tiger Shorts">Midnight Tiger Shorts</option>
+                <option value="Guardian Wraps">Guardian Wraps</option>
+                <option value="Guardian Tiger Mouthguard">Guardian Tiger Mouthguard</option>
+                <option value="Velocity Jump Rope">Velocity Jump Rope</option>
+                <option value="Victory Robe">Victory Robe</option>
+                <option value="General Updates">General Updates</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="What are you interested in?"></textarea>
+            </div>
+
+            <button class="button" type="submit">Join Waitlist</button>
+          </form>
+
+          <p class="note">
+            Once Formspree is connected, entries can be sent to your inbox and autoresponses can be enabled so people automatically receive a confirmation after signing up.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
