@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardian Hand Wraps | Clinch Athletics</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #090909;
+      color: #ece7df;
+      font-family: 'Inter', sans-serif;
+    }
+
+    :root {
+      --gold: #c9a96e;
+      --muted: rgba(236,231,223,0.7);
+      --line: rgba(236,231,223,0.08);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .main-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 1px solid var(--line);
+    }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .thumbs img {
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid var(--line);
+    }
+
+    .section {
+      border-top: 1px solid var(--line);
+      margin-top: 20px;
+      padding-top: 15px;
+    }
+
+    .label {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 20px;
+      border: 1px solid var(--gold);
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="layout">
+
+    <!-- LEFT -->
+    <div>
+      <img id="mainImage" class="main-img" src="images/guardianwraps.png">
+
+      <div class="thumbs">
+        <img src="images/guardianwraps.png" onclick="setImg(this)">
+        <img src="images/handwraps1.png" onclick="setImg(this)">
+        <img src="images/handwraps2.png" onclick="setImg(this)">
+        <img src="images/handwraps3.png" onclick="setImg(this)">
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+
+      <h1>Guardian Hand Wraps</h1>
+
+      <p>
+        Premium cotton-blend hand wraps engineered for maximum protection, durability and breathability. Designed for fighters who demand reliable wrist support and consistent performance during intense training sessions.
+      </p>
+
+      <a class="btn" href="contact.html">Join Waitlist</a>
+
+      <div class="section">
+        <div class="label">Technical Specifications</div>
+        <ul>
+          <li>Length: 4.5 meters (180 inches)</li>
+          <li>Width: 5 cm (2 inches)</li>
+          <li>Material: 70% cotton, 30% polyester</li>
+          <li>Thickness: 1.5mm</li>
+          <li>Weight: 85g per wrap</li>
+          <li>Closure: Hook-and-loop fastener</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="label">Features</div>
+        <ul>
+          <li>Extra-long design for multiple wrapping styles</li>
+          <li>Moisture-wicking fabric</li>
+          <li>Machine washable</li>
+          <li>Thumb loop for secure positioning</li>
+          <li>Subtle Clinch branding</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="label">Use</div>
+        <p>
+          Ideal for Muay Thai, boxing, kickboxing and MMA. Provides essential wrist stabilization and knuckle protection for both bag work and sparring.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function setImg(el) {
+  document.getElementById('mainImage').src = el.src;
+}
+</script>
+
+</body>
+</html>
