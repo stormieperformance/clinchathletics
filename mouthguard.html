@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardian Tiger Mouthguard | Clinch Athletics</title>
+  <meta name="description" content="Premium boil-and-bite mouthguard by Clinch Athletics. Built for Muay Thai, boxing, MMA and combat sports." />
+  <link rel="canonical" href="https://clinchathletics.com/mouthguard.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg: #090909;
+      --text: #ece7df;
+      --muted: rgba(236,231,223,0.68);
+      --soft: rgba(236,231,223,0.32);
+      --line: rgba(236,231,223,0.08);
+      --gold: #c9a96e;
+      --serif: 'Cormorant Garamond', serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #090909;
+      color: var(--text);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(circle at top left, rgba(201,169,110,0.07), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(201,169,110,0.05), transparent 24%);
+    }
+
+    .page {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 28px 80px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      min-width: 220px;
+    }
+
+    .nav-center {
+      text-align: center;
+      flex: 1;
+    }
+
+    .nav-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brand {
+      color: var(--gold);
+      text-decoration: none;
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .crumbs {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 18px 0 0;
+      color: var(--soft);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .crumbs a {
+      color: var(--soft);
+      text-decoration: none;
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.85fr);
+      gap: 44px;
+      align-items: start;
+      padding-top: 22px;
+    }
+
+    .gallery-wrap {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+    }
+
+    .main-image-frame {
+      width: 100%;
+      aspect-ratio: 0.95 / 1;
+      background: #0d0d0d;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .main-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .thumb {
+      border: 1px solid var(--line);
+      background: #111;
+      padding: 0;
+      cursor: pointer;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      transition: border-color 0.25s ease;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .thumb.active,
+    .thumb:hover {
+      border-color: var(--gold);
+    }
+
+    .details {
+      padding-top: 6px;
+    }
+
+    .product-title {
+      font-family: var(--serif);
+      font-size: clamp(52px, 6vw, 78px);
+      font-weight: 300;
+      line-height: 0.95;
+      margin: 0 0 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .intro {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    .meta-block {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      margin-top: 22px;
+    }
+
+    .meta-label {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .size-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .size-pill {
+      min-width: 110px;
+      height: 46px;
+      padding: 0 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid rgba(236,231,223,0.16);
+      color: #111;
+      background: #f4f0e8;
+      font-size: 14px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold);
+      color: var(--text);
+      background: rgba(201,169,110,0.04);
+      transition: transform 0.22s ease, background 0.22s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: rgba(201,169,110,0.1);
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--muted);
+      background: transparent;
+    }
+
+    .button.secondary:hover {
+      border-color: rgba(236,231,223,0.18);
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .panels {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .panel {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .panel h3 {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .panel p,
+    .panel li {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .panel ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .panel strong {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .footer-note {
+      margin-top: 26px;
+      color: var(--soft);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 1100px) {
+      .product-layout {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .gallery-wrap {
+        position: static;
+      }
+
+      .product-title {
+        font-size: clamp(44px, 10vw, 66px);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 0 18px 56px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        text-align: center;
+      }
+
+      .nav-left,
+      .nav-right {
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .thumbs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <nav class="nav-left">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Catalog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-center">
+        <a class="brand" href="index.html">CLINCH ATHLETICS</a>
+      </div>
+
+      <div class="nav-right"></div>
+    </header>
+
+    <div class="crumbs">
+      <a href="shop.html">Catalog</a>
+      <span>•</span>
+      <span>Guardian Tiger Mouthguard</span>
+    </div>
+
+    <main class="product-layout">
+      <section class="gallery-wrap">
+        <div class="main-image-frame">
+          <img id="mainProductImage" src="images/mouthguardcloseup.png" alt="Guardian Tiger Mouthguard close-up">
+        </div>
+
+        <div class="thumbs">
+          <button class="thumb active" type="button" data-image="images/mouthguardcloseup.png" data-alt="Guardian Tiger Mouthguard close-up">
+            <img src="images/mouthguardcloseup.png" alt="">
+          </button>
+
+          <button class="thumb" type="button" data-image="images/mouthguard.png" data-alt="Guardian Tiger Mouthguard">
+            <img src="images/mouthguard.png" alt="">
+          </button>
+
+          <button class="thumb" type="button" data-image="images/mouthguardhand.png" data-alt="Guardian Tiger Mouthguard in hand">
+            <img src="images/mouthguardhand.png" alt="">
+          </button>
+
+          <button class="thumb" type="button" data-image="images/mouthguardbox.png" data-alt="Guardian Tiger Mouthguard with case">
+            <img src="images/mouthguardbox.png" alt="">
+          </button>
+        </div>
+      </section>
+
+      <section class="details">
+        <h1 class="product-title">Guardian Tiger Mouthguard</h1>
+
+        <p class="intro">
+          Protect your teeth, jaw and confidence with the Guardian Tiger Mouthguard. Engineered with advanced shock-absorbing materials and a custom-fit design, this professional-grade mouthguard delivers superior protection during intense combat sports training and competition.
+        </p>
+
+        <div class="meta-block">
+          <span class="meta-label">Size</span>
+          <div class="size-row">
+            <div class="size-pill">One Size</div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="button" href="contact.html">Join Waitlist</a>
+          <a class="button secondary" href="shop.html">Back to Catalog</a>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <h3>What's Included</h3>
+            <ul>
+              <li>1x Guardian Tiger Mouthguard</li>
+              <li>Premium ventilated protective case</li>
+              <li>Fitting instructions</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Technical Specifications</h3>
+            <ul>
+              <li><strong>Material:</strong> Medical-grade EVA (Ethylene-Vinyl Acetate) thermoplastic</li>
+              <li><strong>Construction:</strong> Dual-layer design with high-impact outer shell and gel comfort inner layer</li>
+              <li><strong>Thickness:</strong> 4mm at impact zones, 2.5mm at bite surface</li>
+              <li><strong>Dimensions:</strong> 6cm width × 5.5cm depth (before molding)</li>
+              <li><strong>Weight:</strong> 28g</li>
+              <li><strong>Fitting Type:</strong> Boil-and-bite custom moldable</li>
+              <li><strong>Size:</strong> One size fits most (ages 11+)</li>
+              <li><strong>Color:</strong> Black with gold Clinch Athletics logo</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Protection Features</h3>
+            <ul>
+              <li>High-density EVA absorbs and disperses impact force</li>
+              <li>Extended coverage protects molars and back teeth</li>
+              <li>Reinforced front shield for direct strike protection</li>
+              <li>Breathing channels allow unrestricted airflow</li>
+              <li>Shock Frame technology reduces concussion risk</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Comfort & Fit</h3>
+            <ul>
+              <li>Custom-moldable design conforms to your unique dental structure</li>
+              <li>Gel comfort layer prevents jaw fatigue during extended wear</li>
+              <li>Low-profile design allows natural speech and breathing</li>
+              <li>Secure retention prevents displacement during impact</li>
+              <li>BPA-free, latex-free and phthalate-free materials</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Care Instructions</h3>
+            <ul>
+              <li>Rinse with cold water after each use</li>
+              <li>Clean with mild soap or mouthguard cleaner</li>
+              <li>Store in ventilated protective case (included)</li>
+              <li>Re-moldable up to 3 times for perfect fit adjustment</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Use</h3>
+            <p>
+              Ideal for Muay Thai, boxing, MMA, kickboxing and all contact sports. Meets safety standards for professional and amateur competition.
+            </p>
+          </div>
+        </div>
+
+        <p class="footer-note">
+          Limited production. Final commercial structure and release timing may evolve.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const mainImage = document.getElementById('mainProductImage');
+    const thumbs = document.querySelectorAll('.thumb');
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        mainImage.src = thumb.dataset.image;
+        mainImage.alt = thumb.dataset.alt;
+
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
