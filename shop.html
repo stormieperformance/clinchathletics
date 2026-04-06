@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catalog | Clinch Athletics</title>
-  <meta name="description" content="Explore the Clinch Athletics catalog. Premium Muay Thai products, limited production pieces and signature collections." />
+  <meta name="description" content="Explore the Clinch Athletics catalog. Distinct series built around protection, low-light aggression, speed, and ceremonial presence." />
   <link rel="canonical" href="https://clinchathletics.com/shop.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +13,7 @@
 
   <style>
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #090909;
-      color: #ece7df;
-      font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      background-image:
-        radial-gradient(circle at top left, rgba(201,169,110,0.06), transparent 24%),
-        radial-gradient(circle at bottom right, rgba(201,169,110,0.05), transparent 22%);
-    }
+    html { scroll-behavior: smooth; }
 
     :root {
       --bg: #090909;
@@ -32,13 +23,23 @@
       --soft: rgba(236,231,223,0.32);
       --line: rgba(236,231,223,0.08);
       --gold: #c9a96e;
-      --gold-soft: rgba(201,169,110,0.14);
       --serif: 'Cormorant Garamond', serif;
       --sans: 'Inter', sans-serif;
     }
 
+    body {
+      margin: 0;
+      background: #090909;
+      color: var(--text);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(circle at top left, rgba(201,169,110,0.06), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(201,169,110,0.05), transparent 22%);
+    }
+
     .page {
-      max-width: 1360px;
+      max-width: 1380px;
       margin: 0 auto;
       padding: 0 28px 80px;
     }
@@ -84,13 +85,13 @@
     .hero {
       padding: 42px 0 28px;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1fr 1fr;
       gap: 28px;
       align-items: end;
     }
 
     .hero h1 {
-      margin: 0 0 14px;
+      margin: 0 0 12px;
       font-family: var(--serif);
       font-size: clamp(58px, 7vw, 98px);
       font-weight: 300;
@@ -145,15 +146,15 @@
       white-space: nowrap;
     }
 
-    .collection-grid {
+    .series-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .collection-card {
+    .series-card {
       position: relative;
-      min-height: 340px;
+      min-height: 520px;
       overflow: hidden;
       border: 1px solid var(--line);
       text-decoration: none;
@@ -161,7 +162,7 @@
       background: #111;
     }
 
-    .collection-card img {
+    .series-card img {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -170,33 +171,33 @@
       display: block;
       transform: scale(1.02);
       transition: transform 0.45s ease, opacity 0.35s ease;
-      opacity: 0.86;
+      opacity: 0.88;
     }
 
-    .collection-card::after {
+    .series-card::after {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to top, rgba(0,0,0,0.74), rgba(0,0,0,0.18) 48%, rgba(0,0,0,0.08));
+        linear-gradient(to top, rgba(0,0,0,0.82), rgba(0,0,0,0.2) 48%, rgba(0,0,0,0.08));
     }
 
-    .collection-card:hover img {
+    .series-card:hover img {
       transform: scale(1.05);
-      opacity: 0.94;
+      opacity: 0.95;
     }
 
-    .collection-content {
+    .series-content {
       position: relative;
       z-index: 1;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: end;
-      padding: 26px;
+      padding: 24px;
     }
 
-    .collection-label {
+    .series-index {
       color: var(--gold);
       font-size: 11px;
       letter-spacing: 0.16em;
@@ -204,20 +205,50 @@
       margin-bottom: 10px;
     }
 
-    .collection-title {
+    .series-title {
       margin: 0 0 10px;
       font-family: var(--serif);
-      font-size: clamp(38px, 4vw, 58px);
+      font-size: clamp(36px, 4vw, 56px);
       font-weight: 300;
       line-height: 0.95;
       letter-spacing: -0.03em;
     }
 
-    .collection-copy {
-      max-width: 420px;
-      color: rgba(236,231,223,0.78);
+    .series-copy {
+      color: rgba(236,231,223,0.8);
       font-size: 14px;
       line-height: 1.75;
+      max-width: 340px;
+    }
+
+    .product-group {
+      margin-top: 38px;
+    }
+
+    .group-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 16px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .group-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(34px, 3vw, 46px);
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .group-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 520px;
     }
 
     .product-grid {
@@ -244,7 +275,7 @@
     }
 
     .product-image {
-      aspect-ratio: 0.9 / 1;
+      aspect-ratio: 0.92 / 1;
       overflow: hidden;
       background: #0f0f0f;
       border-bottom: 1px solid var(--line);
@@ -321,7 +352,11 @@
       line-height: 1.8;
     }
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1180px) {
+      .series-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -357,16 +392,17 @@
         min-width: 0;
       }
 
-      .collection-grid,
+      .series-grid,
       .product-grid {
         grid-template-columns: 1fr;
       }
 
-      .collection-card {
-        min-height: 280px;
+      .series-card {
+        min-height: 420px;
       }
 
-      .section-head {
+      .section-head,
+      .group-head {
         flex-direction: column;
         align-items: start;
       }
@@ -393,47 +429,110 @@
       <div>
         <h1>Catalog</h1>
         <p>
-          Limited production Muay Thai pieces built with a darker editorial sensibility. Product, packaging and presentation are treated as part of the same object.
+          Guardian. Midnight. Velocity. Victory. Each line carries its own mood, material language and purpose. Products are grouped by series, not treated as anonymous inventory.
         </p>
       </div>
-      <div class="hero-meta">Premium Muay Thai Objects</div>
+      <div class="hero-meta">Distinct Identities</div>
     </section>
 
     <section class="section">
       <div class="section-head">
-        <h2 class="section-title">Collections</h2>
-        <div class="section-note">Current Direction</div>
+        <h2 class="section-title">Series</h2>
+        <div class="section-note">Current Structure</div>
       </div>
 
-      <div class="collection-grid">
-        <a class="collection-card" href="midnight-tiger-shorts.html">
-          <img src="images/midnighthero.png" alt="Midnight Tiger Collection">
-          <div class="collection-content">
-            <div class="collection-label">Collection</div>
-            <h3 class="collection-title">Midnight Tiger</h3>
-            <p class="collection-copy">
-              A black and gold Muay Thai direction built around satin, embroidery and ritual presentation.
+      <div class="series-grid">
+        <a class="series-card" href="#guardian">
+          <img src="images/mouthguardcloseup.png" alt="Guardian series">
+          <div class="series-content">
+            <div class="series-index">Series I</div>
+            <h3 class="series-title">Guardian</h3>
+            <p class="series-copy">
+              Protection, control, and presence. A defensive visual language built for composure under pressure.
             </p>
           </div>
         </a>
 
-        <a class="collection-card" href="shop.html">
-          <img src="images/guardianwraps.png" alt="Future Clinch Athletics direction">
-          <div class="collection-content">
-            <div class="collection-label">Future Direction</div>
-            <h3 class="collection-title">More to Come</h3>
-            <p class="collection-copy">
-              Additional product worlds, collections and limited drops will be developed over time.
+        <a class="series-card" href="#midnight">
+          <img src="images/midnightcloseup.png" alt="Midnight series">
+          <div class="series-content">
+            <div class="series-index">Series II</div>
+            <h3 class="series-title">Midnight</h3>
+            <p class="series-copy">
+              Low-light aggression. Sharper contrast, darker energy, and a more covert luxury expression.
+            </p>
+          </div>
+        </a>
+
+        <a class="series-card" href="#velocity">
+          <img src="images/jumpropecloseup.png" alt="Velocity series">
+          <div class="series-content">
+            <div class="series-index">Series III</div>
+            <h3 class="series-title">Velocity</h3>
+            <p class="series-copy">
+              Speed, rhythm, and acceleration. Built around movement quality and repeat precision.
+            </p>
+          </div>
+        </a>
+
+        <a class="series-card" href="#victory">
+          <img src="images/victoryhero1.PNG" alt="Victory series">
+          <div class="series-content">
+            <div class="series-index">Series IV</div>
+            <h3 class="series-title">Victory</h3>
+            <p class="series-copy">
+              Outcome, dominance, and arrival. A ceremonial expression of earned status and final form.
             </p>
           </div>
         </a>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-head">
-        <h2 class="section-title">Products</h2>
-        <div class="section-note">Current Catalog</div>
+    <section class="product-group" id="guardian">
+      <div class="group-head">
+        <h2 class="group-title">Guardian</h2>
+        <p class="group-copy">
+          Defensive essentials built around protection, structure and controlled performance.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <a class="product-card" href="guardian-wraps.html">
+          <div class="product-image">
+            <img src="images/guardianwraps.png" alt="Guardian Hand Wraps">
+          </div>
+          <div class="product-body">
+            <div class="product-kicker">Hand Wraps</div>
+            <h3 class="product-title">Guardian Wraps</h3>
+            <p class="product-copy">
+              Premium cotton-blend wraps built for wrist support, breathability and repeat use under pressure.
+            </p>
+            <div class="product-link">View Product</div>
+          </div>
+        </a>
+
+        <a class="product-card" href="mouthguard.html">
+          <div class="product-image">
+            <img src="images/mouthguardcloseup.png" alt="Guardian Tiger Mouthguard">
+          </div>
+          <div class="product-body">
+            <div class="product-kicker">Mouthguard</div>
+            <h3 class="product-title">Guardian Tiger Mouthguard</h3>
+            <p class="product-copy">
+              Shock-absorbing boil-and-bite protection with a darker premium object language and secure fit.
+            </p>
+            <div class="product-link">View Product</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="product-group" id="midnight">
+      <div class="group-head">
+        <h2 class="group-title">Midnight</h2>
+        <p class="group-copy">
+          A darker satin expression shaped around contrast, embroidery and ritual presentation.
+        </p>
       </div>
 
       <div class="product-grid">
@@ -450,83 +549,77 @@
             <div class="product-link">View Product</div>
           </div>
         </a>
+      </div>
+    </section>
 
-        <a class="product-card" href="#">
+    <section class="product-group" id="velocity">
+      <div class="group-head">
+        <h2 class="group-title">Velocity</h2>
+        <p class="group-copy">
+          Conditioning objects focused on rhythm, acceleration and movement efficiency.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <a class="product-card" href="velocity-jump-rope.html">
           <div class="product-image">
-            <img src="images/guardianwraps.png" alt="Guardian Hand Wraps">
+            <img src="images/jumpropecloseup.png" alt="Velocity Jump Rope">
           </div>
           <div class="product-body">
-            <div class="product-kicker">Hand Wraps</div>
-            <h3 class="product-title">Guardian Wraps</h3>
+            <div class="product-kicker">Jump Rope</div>
+            <h3 class="product-title">Velocity Jump Rope</h3>
             <p class="product-copy">
-              Protective hand wraps developed as part of the wider Clinch Athletics product system.
+              Professional speed rope with coated steel cable, ball-bearing rotation and precision-driven feel.
             </p>
-            <div class="product-link">Coming Soon</div>
+            <div class="product-link">View Product</div>
           </div>
         </a>
+      </div>
+    </section>
 
-        <a class="product-card" href="#">
+    <section class="product-group" id="victory">
+      <div class="group-head">
+        <h2 class="group-title">Victory</h2>
+        <p class="group-copy">
+          Ceremonial outer layers built for arrival, status and ring presence before impact.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <a class="product-card" href="victory-robe.html">
           <div class="product-image">
-            <img src="images/mouthguard.png" alt="Clinch Athletics Mouthguard">
+            <img src="images/victoryhero1.PNG" alt="Victory Robe">
           </div>
           <div class="product-body">
-            <div class="product-kicker">Mouthguard</div>
-            <h3 class="product-title">Signature Mouthguard</h3>
+            <div class="product-kicker">Robe</div>
+            <h3 class="product-title">Victory Robe</h3>
             <p class="product-copy">
-              A protective essential shaped to sit inside the same premium object language as the rest of the brand.
+              Premium championship robe in black satin with gold trim, built for entrances and ceremonial presence.
             </p>
-            <div class="product-link">Coming Soon</div>
-          </div>
-        </a>
-
-        <a class="product-card" href="#">
-          <div class="product-image">
-            <img src="images/victoryhero1.png" alt="Clinch Athletics Hood">
-          </div>
-          <div class="product-body">
-            <div class="product-kicker">Outerwear</div>
-            <h3 class="product-title">Victory Hood</h3>
-            <p class="product-copy">
-              A darker, premium layer intended to extend the Clinch visual identity beyond pure training essentials.
-            </p>
-            <div class="product-link">Coming Soon</div>
-          </div>
-        </a>
-
-        <a class="product-card" href="#">
-          <div class="product-image">
-            <img src="images/jumprope1.png" alt="Clinch Athletics Jump Rope">
-          </div>
-          <div class="product-body">
-            <div class="product-kicker">Conditioning</div>
-            <h3 class="product-title">Velocity Rope</h3>
-            <p class="product-copy">
-              A jump rope concept designed to live inside the same premium conditioning ecosystem.
-            </p>
-            <div class="product-link">Coming Soon</div>
+            <div class="product-link">View Product</div>
           </div>
         </a>
       </div>
 
       <div class="info-band">
         <div class="info-item">
+          <h3>Series First</h3>
+          <p>
+            Clinch Athletics is structured around distinct lines, each carrying its own visual logic, product role and emotional tone.
+          </p>
+        </div>
+
+        <div class="info-item">
           <h3>Limited Production</h3>
           <p>
-            Clinch Athletics is being built carefully, with each product treated as part of a coherent brand object rather than a mass catalog.
+            Products are being built carefully, with focus on material direction, presentation and coherence rather than volume.
           </p>
         </div>
 
         <div class="info-item">
-          <h3>Packaging Matters</h3>
+          <h3>Catalog Will Expand</h3>
           <p>
-            Boxes, bags and presentation details are part of the product identity, not afterthoughts.
-          </p>
-        </div>
-
-        <div class="info-item">
-          <h3>More Products Ahead</h3>
-          <p>
-            The current catalog is a foundation. Additional pages will be added as each product is properly built out.
+            Additional pages, imagery and products will be added as each object is properly developed and positioned.
           </p>
         </div>
       </div>
