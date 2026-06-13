@@ -1,1 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Clinch Athletics Premium Combat Gear</title>
+<meta name="description" content="Limited production premium combat gear. Four series built around protection, aggression, speed and ceremonial presence."/>
+<link rel="canonical" href="https://clinchathletics.com/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+ --bg:#090909;--bg2:#101010;--bg3:#181818;
+ --text:#ece7df;--muted:rgba(236,231,223,0.5);--muted2:rgba(236,231,223,0.2);
+ --line:rgba(236,231,223,0.07);
+ --gold:#c9a96e;--gold-b:#e8d4a0;--gold-d:rgba(201,169,110,0.1);--gold-l:rgba(201,169,110,0.35);
+ --serif:'Cormorant Garamond',serif;--sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.035;
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+ background-size:180px 180px}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+button{font-family:var(--sans);cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
 
+.page{position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:0 40px 100px}
+
+/* ── TOPBAR ── */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0 20px;border-bottom:1px solid var(--line)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.brand{font-family:var(--serif);font-size:clamp(22px,3vw,36px);letter-spacing:.04em;color:var(--gold);font-weight:300}
+.nav-right{display:flex;gap:20px;align-items:center;min-width:180px;justify-content:flex-end}
+.nav-right a{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);transition:color .2s}
+.nav-right a:hover{color:var(--gold)}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--gold-l);color:var(--gold);background:var(--gold-d);transition:background .25s,border-color .25s,color .25s}
+.btn:hover{background:rgba(201,169,110,0.18);border-color:var(--gold);color:var(--gold-b)}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);color:var(--muted2);background:transparent;transition:border-color .25s,color .25s}
+.btn-ghost:hover{border-color:var(--muted2);color:var(--text)}
+
+/* ── HERO ── */
+.hero{padding:44px 0 0;display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:start}
+.hero-visual{position:relative;overflow:hidden;border:1px solid var(--line)}
+.hero-visual img{width:100%;display:block;object-fit:cover;object-position:center top;max-height:82vh;opacity:.82;transition:opacity .4s}
+.hero-visual:hover img{opacity:.92}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.82) 0%,rgba(5,5,5,.28) 55%,rgba(5,5,5,.06) 100%)}
+.hero-text{position:absolute;bottom:0;left:0;right:0;padding:36px 32px}
+.hero-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.hero-kicker::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-size:clamp(48px,7vw,100px);font-weight:300;line-height:.9;letter-spacing:-.03em;margin-bottom:20px}
+.hero-sub{font-size:14px;font-weight:300;color:rgba(236,231,223,0.75);line-height:1.8;max-width:480px;margin-bottom:28px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-side{border:1px solid var(--line);padding:28px;background:rgba(255,255,255,.012);align-self:start}
+.hero-side h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;line-height:1;margin-bottom:14px}
+.hero-side p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.85}
+
+/* ── SECTIONS ── */
+.section{padding-top:44px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:20px}
+.section-title{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;line-height:1}
+.section-note{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);white-space:nowrap}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line)}
+.about-card{background:var(--bg);padding:28px 28px 26px}
+.about-card h3{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:400}
+.about-card p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.85}
+
+/* ── SERIES ── */
+.series-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.series-card{position:relative;min-height:480px;overflow:hidden;background:var(--bg2);display:block;color:inherit}
+.series-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;transition:opacity .4s,transform .5s}
+.series-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.92) 0%,rgba(5,5,5,.3) 55%,rgba(5,5,5,.08) 100%)}
+.series-card:hover img{opacity:.9;transform:scale(1.04)}
+.series-content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:24px}
+.series-index{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.series-name{font-family:var(--serif);font-size:clamp(34px,4vw,52px);font-weight:300;line-height:.92;letter-spacing:-.02em;margin-bottom:10px}
+.series-desc{font-size:12px;font-weight:300;color:rgba(236,231,223,.72);line-height:1.7;max-width:280px}
+
+/* ── PRODUCTS ── */
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.product-card{background:var(--bg);display:flex;flex-direction:column;transition:background .25s}
+.product-card:hover{background:var(--bg2)}
+.product-img{aspect-ratio:1/1;overflow:hidden;background:var(--bg3);border-bottom:1px solid var(--line)}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .3s;opacity:.85}
+.product-card:hover .product-img img{transform:scale(1.04);opacity:.95}
+.product-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.product-series{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.product-name{font-family:var(--serif);font-size:32px;font-weight:300;line-height:.95;letter-spacing:-.01em}
+.product-desc{font-size:12px;font-weight:300;color:var(--muted);line-height:1.75;margin-top:4px}
+.product-link{margin-top:auto;padding-top:12px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);transition:color .2s}
+.product-card:hover .product-link{color:var(--gold-b)}
+
+/* ── CLOSING ── */
+.closing{margin-top:44px;border-top:1px solid var(--line);padding-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border-right:1px solid var(--line);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.closing-item{background:var(--bg);padding:24px 24px 22px}
+.closing-item h3{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:400}
+.closing-item p{font-size:12px;font-weight:300;color:var(--muted);line-height:1.8}
+
+/* ── CONTACT ── */
+.contact{padding:72px 0 0;border-top:1px solid var(--line);margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-left h2{font-family:var(--serif);font-size:clamp(36px,4vw,56px);font-weight:300;line-height:1;margin-bottom:16px}
+.contact-left p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.85}
+.contact-form{display:flex;flex-direction:column;gap:20px}
+.field label{display:block;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);color:var(--text);font-family:var(--sans);font-size:13px;font-weight:300;padding:8px 0 10px;transition:border-color .25s;border-radius:0;appearance:none}
+.field select option{background:var(--bg2)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);outline:none}
+.field textarea{resize:vertical;min-height:80px}
+.form-submit{align-self:flex-start;margin-top:8px}
+.hp-field{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+.form-success{display:none;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--gold);padding:20px 0}
+.form-error{display:none;font-size:11px;color:#c97070;margin-top:8px;letter-spacing:.04em}
+
+/* ── FOOTER ── */
+.footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.footer-left{font-family:var(--serif);font-size:13px;font-style:italic;color:var(--muted2)}
+.footer-right{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2)}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+ .page{padding:0 24px 72px}
+ .topbar{display:grid;grid-template-columns:1fr;gap:12px;text-align:center}
+ .nav-links,.nav-right{justify-content:center}
+ .nav-right{min-width:0}
+ .hero{grid-template-columns:1fr;gap:0;padding-top:40px}
+ .hero-side{margin-top:24px}
+ .about-grid,.series-grid,.product-grid,.closing,.contact{grid-template-columns:1fr}
+ .series-card{min-height:380px}
+ .section-head{flex-direction:column;align-items:flex-start}
+ .footer{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- TOPBAR -->
+<header class="topbar">
+ <nav class="nav-links">
+ <a href="#series">Series</a>
+ <a href="#catalog">Catalog</a>
+ <a href="#contact">Contact</a>
+ </nav>
+ <a class="brand" href="#">CLINCH ATHLETICS</a>
+ <div class="nav-right">
+ <a href="#contact">Join waitlist</a>
+ </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+ <div class="hero-visual">
+ <img src="images/victoryhero1.png" alt="Clinch Athletics Victory Robe" loading="eager"/>
+ <div class="hero-overlay"></div>
+ <div class="hero-text">
+ <p class="hero-kicker">Limited production · Premium combat gear</p>
+ <h1>Built for the ring.</h1>
+ <p class="hero-sub">Four series. Each one designed around a specific role: protection, aggression, speed, ceremony. Not a mass catalog.</p>
+ <div class="hero-ctas">
+ <a class="btn" href="#series">View series</a>
+ <a class="btn-ghost" href="#contact">Join waitlist</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-side">
+ <h2>Made carefully.</h2>
+ <p>Each object belongs to a specific line with its own material direction and visual tone. The structure is Guardian, Midnight, Velocity and Victory. New pieces are added as they are ready.</p>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+ <div class="section-head">
+ <h2 class="section-title">About</h2>
+ <span class="section-note">Brand direction</span>
+ </div>
+ <div class="about-grid">
+ <div class="about-card">
+ <h3>What this is</h3>
+ <p>A premium combat gear concept. Limited production, dark presentation, and a coherent object language across training essentials, protective pieces, conditioning tools and ceremonial outerwear.</p>
+ </div>
+ <div class="about-card">
+ <h3>How it's structured</h3>
+ <p>Products are grouped into four distinct series rather than treated as disconnected inventory. Each series has its own visual tone and product logic. The catalog is built from within that structure.</p>
+ </div>
+ </div>
+</section>
+
+<!-- SERIES -->
+<section class="section" id="series">
+ <div class="section-head">
+ <h2 class="section-title">Series</h2>
+ <span class="section-note">I / II / III / IV</span>
+ </div>
+ <div class="series-grid">
+ <a class="series-card" href="shop.html#guardian">
+ <img src="images/mouthguardcloseup.png" alt="Guardian series" loading="lazy"/>
+ <div class="series-content">
+ <div class="series-index">Series I</div>
+ <h3 class="series-name">Guardian</h3>
+ <p class="series-desc">Protection and composure. A defensive visual language built for control under pressure.</p>
+ </div>
+ </a>
+ <a class="series-card" href="shop.html#midnight">
+ <img src="images/midnightcloseup.png" alt="Midnight series" loading="lazy"/>
+ <div class="series-content">
+ <div class="series-index">Series II</div>
+ <h3 class="series-name">Midnight</h3>
+ <p class="series-desc">Dark energy, sharp contrast. A more covert expression of aggression and precision.</p>
+ </div>
+ </a>
+ <a class="series-card" href="shop.html#velocity">
+ <img src="images/jumpropecloseup.png" alt="Velocity series" loading="lazy"/>
+ <div class="series-content">
+ <div class="series-index">Series III</div>
+ <h3 class="series-name">Velocity</h3>
+ <p class="series-desc">Speed and rhythm. Built around movement quality and repeat precision.</p>
+ </div>
+ </a>
+ <a class="series-card" href="shop.html#victory">
+ <img src="images/victoryhero1.png" alt="Victory series" loading="lazy"/>
+ <div class="series-content">
+ <div class="series-index">Series IV</div>
+ <h3 class="series-name">Victory</h3>
+ <p class="series-desc">Ceremonial. The expression of earned status and final form.</p>
+ </div>
+ </a>
+ </div>
+</section>
+
+<!-- CATALOG / PRODUCTS -->
+<section class="section" id="catalog">
+ <div class="section-head">
+ <h2 class="section-title">Catalog</h2>
+ <span class="section-note">Selected objects</span>
+ </div>
+ <div class="product-grid">
+ <a class="product-card" href="midnight-tiger-shorts.html">
+ <div class="product-img">
+ <img src="images/midnightcloseup.png" alt="Midnight Tiger Shorts" loading="lazy"/>
+ </div>
+ <div class="product-body">
+ <span class="product-series">Series II · Midnight</span>
+ <h3 class="product-name">Midnight Tiger Shorts</h3>
+ <p class="product-desc">Satin, embroidery and contrast. A core Muay Thai object built inside the Midnight language.</p>
+ <span class="product-link">View product →</span>
+ </div>
+ </a>
+ <a class="product-card" href="mouthguard.html">
+ <div class="product-img">
+ <img src="images/mouthguardcloseup.png" alt="Guardian Tiger Mouthguard" loading="lazy"/>
+ </div>
+ <div class="product-body">
+ <span class="product-series">Series I · Guardian</span>
+ <h3 class="product-name">Guardian Tiger Mouthguard</h3>
+ <p class="product-desc">Protection translated into the same premium object language as the rest of the brand.</p>
+ <span class="product-link">View product →</span>
+ </div>
+ </a>
+ <a class="product-card" href="velocity-jump-rope.html">
+ <div class="product-img">
+ <img src="images/jumpropecloseup.png" alt="Velocity Jump Rope" loading="lazy"/>
+ </div>
+ <div class="product-body">
+ <span class="product-series">Series III · Velocity</span>
+ <h3 class="product-name">Velocity Jump Rope</h3>
+ <p class="product-desc">A conditioning tool built around precision, acceleration and repeatable movement.</p>
+ <span class="product-link">View product →</span>
+ </div>
+ </a>
+ </div>
+
+ <div class="closing">
+ <div class="closing-item">
+ <h3>Series first</h3>
+ <p>Every object belongs to a line. That structure gives the catalog internal logic and a coherent identity across pieces.</p>
+ </div>
+ <div class="closing-item">
+ <h3>Limited production</h3>
+ <p>Products are developed carefully. New pages and drops are added as each object is properly shaped and ready.</p>
+ </div>
+ <div class="closing-item">
+ <h3>Stay close</h3>
+ <p>Browse the current catalog, then join the waitlist for updates on future releases and availability.</p>
+ </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+ <div class="contact-left">
+ <h2>Get in touch.</h2>
+ <p>Questions about a product, series, or availability or just want on the list. Either way, reach out below.</p>
+ </div>
+ <div>
+ <form class="contact-form" id="contactForm" novalidate>
+ <p class="hp-field" aria-hidden="true"><label>Leave blank: <input name="_gotcha" tabindex="-1" autocomplete="off"/></label></p>
+ <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" required autocomplete="name"/></div>
+ <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" required autocomplete="email"/></div>
+ <div class="field">
+ <label for="f-interest">Interest</label>
+ <select id="f-interest" name="interest">
+ <option value="general">General enquiry</option>
+ <option value="guardian">Series I · Guardian</option>
+ <option value="midnight">Series II · Midnight</option>
+ <option value="velocity">Series III · Velocity</option>
+ <option value="victory">Series IV · Victory</option>
+ <option value="waitlist">Waitlist</option>
+ </select>
+ </div>
+ <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+ <button class="btn form-submit" type="submit" id="submitBtn">Send →</button>
+ <p class="form-error" id="formError">Something went wrong. Try again or email clinchathletics.store@gmail.com</p>
+ </form>
+ <p class="form-success" id="formSuccess">Message received.</p>
+ </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+ <span class="footer-left">Clinch Athletics</span>
+ <span class="footer-right">Premium combat gear · Limited production</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+ const form=document.getElementById('contactForm');
+ const btn=document.getElementById('submitBtn');
+ const ok=document.getElementById('formSuccess');
+ const err=document.getElementById('formError');
+ if(!form)return;
+ form.addEventListener('submit',function(e){
+ e.preventDefault();
+ const hp=form.querySelector('input[name="_gotcha"]');
+ if(hp&&hp.value)return;
+ const name=form.querySelector('#f-name').value.trim();
+ const email=form.querySelector('#f-email').value.trim();
+ if(!name||!email)return;
+ btn.disabled=true;btn.style.opacity='0.5';err.style.display='none';
+ fetch('https://formspree.io/f/mvznvwpk',{
+ method:'POST',
+ headers:{'Accept':'application/json','Content-Type':'application/json'},
+ body:JSON.stringify({
+ name,email,
+ interest:form.querySelector('#f-interest').value,
+ message:form.querySelector('#f-msg').value.trim(),
+ _subject:'New enquiry via clinchathletics.com',
+ _replyto:email
+ })
+ })
+ .then(r=>{
+ if(r.ok){form.style.display='none';ok.style.display='block';}
+ else throw 0;
+ })
+ .catch(()=>{
+ btn.disabled=false;btn.style.opacity='1';err.style.display='block';
+ });
+ });
+})();
+</script>
+</body>
+</html>
