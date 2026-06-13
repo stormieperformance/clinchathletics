@@ -46,16 +46,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .btn-ghost:hover{border-color:var(--muted2);color:var(--text)}
 
 /* ── HERO ── */
-.hero{padding:56px 0 0;display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:end}
-.hero-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.hero{padding:44px 0 0;display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:start}
+.hero-visual{position:relative;overflow:hidden;border:1px solid var(--line)}
+.hero-visual img{width:100%;display:block;object-fit:cover;object-position:center top;max-height:82vh;opacity:.82;transition:opacity .4s}
+.hero-visual:hover img{opacity:.92}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.82) 0%,rgba(5,5,5,.28) 55%,rgba(5,5,5,.06) 100%)}
+.hero-text{position:absolute;bottom:0;left:0;right:0;padding:36px 32px}
+.hero-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px}
 .hero-kicker::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
-.hero h1{font-family:var(--serif);font-size:clamp(56px,8vw,116px);font-weight:300;line-height:.9;letter-spacing:-.03em;margin-bottom:22px}
-.hero-sub{font-size:14px;font-weight:300;color:var(--muted);line-height:1.85;max-width:520px;margin-bottom:32px}
+.hero h1{font-family:var(--serif);font-size:clamp(48px,7vw,100px);font-weight:300;line-height:.9;letter-spacing:-.03em;margin-bottom:20px}
+.hero-sub{font-size:14px;font-weight:300;color:rgba(236,231,223,0.75);line-height:1.8;max-width:480px;margin-bottom:28px}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-.hero-img{margin-top:28px;width:100%;overflow:hidden;border:1px solid var(--line)}
-.hero-img img{width:100%;height:auto;display:block;opacity:.9;transition:opacity .4s}
-.hero-img:hover img{opacity:1}
-.hero-side{border:1px solid var(--line);padding:28px;background:rgba(255,255,255,.012);align-self:start;margin-top:56px}
+.hero-side{border:1px solid var(--line);padding:28px;background:rgba(255,255,255,.012);align-self:start}
 .hero-side h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;line-height:1;margin-bottom:14px}
 .hero-side p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.85}
 
@@ -155,7 +157,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <!-- HERO -->
 <section class="hero">
- <div>
+ <div class="hero-visual">
+ <img src="images/victoryhero1.png" alt="Clinch Athletics Victory Robe" loading="eager"/>
+ <div class="hero-overlay"></div>
+ <div class="hero-text">
  <p class="hero-kicker">Limited production · Premium combat gear</p>
  <h1>Built for the ring.</h1>
  <p class="hero-sub">Four series. Each one designed around a specific role: protection, aggression, speed, ceremony. Not a mass catalog.</p>
@@ -163,8 +168,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
  <a class="btn" href="#series">View series</a>
  <a class="btn-ghost" href="#contact">Join waitlist</a>
  </div>
- <div class="hero-img">
- <img src="images/victoryhero1.png" alt="Clinch Athletics Victory Robe" loading="eager"/>
  </div>
  </div>
  <div class="hero-side">
